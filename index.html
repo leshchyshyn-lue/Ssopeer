@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SShopeer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+
+<body>
+    <div class="modal-window">
+        <div class="modal-window__search-window">
+            <div class="modal-window__first-row">
+                <div class="modal-window__title">Пошук</div>
+                <button class="close-search">
+                    <img src="img/close.png" alt="#">
+                </button>
+            </div>
+            <form name="searchForm" action="post">
+                <div class="modal-window__second-row">
+                    <input name="searchInput" type="text" placeholder="Введіть текс для пошуку">
+                    <button class="modal-window__search">
+                        <img src="img/search.png" alt="">
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
+
+    <div class="wrapper">
+        <div class="header">
+            <div class="container">
+                <div id="header" class="header__row"></div>
+            </div>
+            <div class="line"></div>
+        </div>
+
+        <div id="login"></div>
+        <div id="registration"></div>
+
+
+
+        <div id="shopping" class="shopping"></div>
+        <div class="content-body">
+            <div class="menu">
+                <div class="menu__link">Новинки</div>
+                <div class="menu__link">Знижки</div>
+                <div class="menu__link">Одяг</div>
+                <div class="menu__link">Взуття</div>
+            </div>
+            <div class="products">
+                <div class="container">
+                    <div id="products" class="products__row">
+                    </div>
+                    <div id="order"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="constants/catalog.js"></script>
+    <script src="constants/root.js"></script>
+    <script src="constants/countries.js"></script>
+    <script src="constants/users.js"></script>
+    <script src="constants/environment.js"></script>
+
+    <script src="utils/localStorageUtil.js"></script>
+    <script src="utils/scrollController.js"></script>
+
+
+
+    <script src="components/Header/Header.js"></script>
+    <!-- <link rel="stylesheet" href="components/Header/Header.scss"> -->
+    <script src="components/Login/Login.js"></script>
+    <script src="components/Registration/Registration.js"></script>
+
+
+    <script src="js/script.js"></script>
+
+    <script src="components/Products/Products.js"></script>
+    <!-- <link rel="stylesheet" href="components/Products/Products.scss"> -->
+
+    <script src="components/Shopping/Shopping.js"></script>
+    <!-- <link rel="stylesheet" href="components/Shopping/Shopping.scss"> -->
+
+    <script src="components/Order/Order.js"></script>
+
+
+</body>
+
+
+
+</html>
