@@ -507,10 +507,12 @@ a {
 }
 
 .login {
+
 	&__enter {
+		border: 5px solid #0000ff;
 		position: fixed;
 		background-color: #e0ffff;
-		width: 300px;
+		width: 305px;
 		height: 270px;
 		left: 50%;
 		top: 50%;
@@ -524,7 +526,6 @@ a {
 	align-items: center;
 
 	input {
-
 		padding: 10px;
 		border-radius: 5px;
 		margin-bottom: 5px
@@ -533,7 +534,22 @@ a {
 	&__field {
 		margin-top: 10px;
 		width: 90%;
+		border: 1px solid black;
+	}
 
+	&__pass-row {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		justify-content: center;
+
+		img {
+			position: absolute;
+			margin-top: 5px;
+			right: 30px;
+			max-width: 25px;
+			max-height: 25px;
+		}
 	}
 
 	label {
@@ -570,6 +586,12 @@ a {
 			padding: 10px 20px;
 			border-radius: 10px;
 		}
-
 	}
+}
+
+.errorMessage {
+	padding: 0px 10px;
+	color: red;
+	font-size: 18px;
+	text-align: center;
 }

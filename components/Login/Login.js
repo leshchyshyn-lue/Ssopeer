@@ -2,18 +2,24 @@ class Login {
 
     onLogin() {
         let form = document.getElementById('loginForm');
-        form.addEventListener('submit', () => {
+        form.addEventListener('click', (e) => {
             const formData = new FormData(form);
             const email = formData.get('email');
             const password = formData.get('password');
             const usersInMemory = localStorageUtil.getUsersInMemory();
-
+            let confirmed = false;
             Object.values(usersInMemory).forEach(element => {
                 if (element.email === email && element.password === password) {
                     localStorageUtil.putUser(element.id, element.email, element.password, Object.values(element.products));
+                    confirmed = true;
                 }
             });
-        });
+            if (confirmed === false) {
+                e.preventDefault();
+                const errorMessage = 'Неправильний логін або пароль';
+                formsHelper.onInputError(errorMessage, '300px', 'loginForm');
+            }
+        }, { once: true });
     }
 
     rendler() {
@@ -39,9 +45,12 @@ class Login {
                                 <label id ="password">Пароль *</label>
                                 <a>Забули пароль?</a>
                             </div>
-                                <input class="data__field" type="password" name="password" placeholder="Введіть ваш пароль">
+                            <div class="data__pass-row">
+                                <input id="pass" class="data__field" type="password" name="password" placeholder="Введіть ваш пароль">
+                                <img src="img/showpass.png" onclick="formsHelper.showPassword()">
+                            </div>
                                 <div class="data__buttons">
-                                    <button type="submit" onclick="loginPage.onLogin()">Увійти</button>
+                                    <button onclick="loginPage.onLogin()">Увійти</button>
                                     <a onclick="registrationPage.rendler()">Реєстрація</a>
                                 </div>                           
                         </div>               
