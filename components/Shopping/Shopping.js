@@ -1,7 +1,5 @@
 class Shopping {
 
-
-
     clearOneElement(element, id) {
         productsPage.handleSetLocationStorage(element, id);
         productsPage.rendler();
@@ -51,10 +49,8 @@ class Shopping {
                 }
             });
             let html = `
-            
             <div class="bucket">
                 ${title}
-                
                 <div class="container">
                 ${hmtlCatalog}
                 <div class="bucket__sum">Сумма: ${sumCatalog} грн.</div>

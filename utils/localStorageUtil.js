@@ -2,7 +2,6 @@ class LocalStorageUtil {
 
     getProducts() {
         const productsLocalStorage = localStorage.getItem(PRODUCTS_KEY);
-
         if (productsLocalStorage !== null) {
             return JSON.parse(productsLocalStorage);
         }
@@ -28,8 +27,6 @@ class LocalStorageUtil {
         } else {
             products.splice(index, 1);
         }
-
-
 
         this.putUser(user.id, user.email, user.password, products);
         this.putProductsInUserInMemory(products);
@@ -83,7 +80,6 @@ class LocalStorageUtil {
                 return;
             }
         });
-
     }
 
     checkAuthorization() {

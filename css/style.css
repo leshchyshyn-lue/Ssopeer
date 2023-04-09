@@ -600,9 +600,10 @@ a {
 }
 
 .login__enter {
+  border: 5px solid #0000ff;
   position: fixed;
   background-color: #e0ffff;
-  width: 300px;
+  width: 305px;
   height: 270px;
   left: 50%;
   top: 50%;
@@ -630,6 +631,26 @@ a {
 .data__field {
   margin-top: 10px;
   width: 90%;
+  border: 1px solid black;
+}
+.data__pass-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.data__pass-row img {
+  position: absolute;
+  margin-top: 5px;
+  right: 30px;
+  max-width: 25px;
+  max-height: 25px;
 }
 .data label {
   font-size: 16px;
@@ -670,4 +691,11 @@ a {
   background-color: #0000ff;
   padding: 10px 20px;
   border-radius: 10px;
+}
+
+.errorMessage {
+  padding: 0px 10px;
+  color: red;
+  font-size: 18px;
+  text-align: center;
 }
