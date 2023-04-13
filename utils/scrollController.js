@@ -8,6 +8,7 @@ class ScrollController {
     removeScroll() {
         document.querySelector('HTML').style.overflow = 'hidden';
     }
+
 }
 
 const scrollController = new ScrollController();

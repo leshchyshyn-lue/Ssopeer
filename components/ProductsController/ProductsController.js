@@ -1,10 +1,4 @@
-class Product {
-
-    constructor() {
-        this.classNameActive = 'products__details_active';
-        this.labelAdd = 'Добавити в корзину';
-        this.labelRemove = 'Видалити з корзини';
-    }
+class ProductsController {
 
     handleSetLocationStorage(element, id) {
         if (localStorageUtil.getUser() === null) {
@@ -13,42 +7,41 @@ class Product {
             const { pushProduct, products } = localStorageUtil.putProducts(id);
 
             if (pushProduct) {
-                element.classList.add(this.classNameActive);
-                element.innerHTML = this.labelRemove;
+                element.classList.add(CLASS_NAME_ACTIVE);
+                element.innerHTML = LABEL_REMOVE;
             } else {
-                element.classList.remove(this.classNameActive);
-                element.innerHTML = this.labelAdd;
+                element.classList.remove(CLASS_NAME_ACTIVE);
+                element.innerHTML = LABEL_ADD;
             }
             headerPage.rendler();
         }
     }
 
-    rendler() {
+    rendler(products) {
+
         let user = localStorageUtil.getUser();
 
         let hmtlCatalog = '';
-        CATALOG.forEach(({ size, description, price, id, img }) => {
+        products.forEach(({ size, description, price, id, img }) => {
             let activeClass = '';
             let activeText = '';
             if (user !== null) {
                 const userProducts = user.products;
 
                 if (userProducts.indexOf(id) === -1) {
-                    activeText = this.labelAdd;
+                    activeText = LABEL_ADD;
                 } else {
-                    activeClass = ' ' + this.classNameActive;
-                    activeText = this.labelRemove;
+                    activeClass = ' ' + CLASS_NAME_ACTIVE;
+                    activeText = LABEL_REMOVE;
                 }
             } else {
-                activeText = this.labelAdd;
+                activeText = LABEL_ADD;
             }
-
-
 
             hmtlCatalog += `
                         <div class="products__product">
                             <div class="products__image">
-                                <img src="${img}" alt="#">
+                                <button onClick="closeUpPicturePage.rendler('${img}')"><img src="${img}" alt="#"></button>
                             </div>
                             <div class="products__details">
                                 <div class="products__details_description">
@@ -58,9 +51,9 @@ class Product {
                                     ${size}
                                 </div>
                                 <div class="products__details_price">
-                                    ${price}
+                                    ${price} грн.
                                 </div>
-                                 <button class="products__details_add${activeClass}" onclick="productsPage.handleSetLocationStorage(this, '${id}')">
+                                 <button class="products__details_add${activeClass}" onclick="productsController.handleSetLocationStorage(this, '${id}')">
                                  ${activeText}
                                  </button>
                             </div>
@@ -71,5 +64,5 @@ class Product {
     }
 }
 
-const productsPage = new Product;
-productsPage.rendler();
+const productsController = new ProductsController();
+productsController.rendler(CATALOG)

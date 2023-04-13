@@ -27,7 +27,6 @@
                     </button>
                 </div>
             </form>
-
         </div>
     </div>
 
@@ -38,56 +37,160 @@
             <div class="container">
                 <div id="header" class="header__row"></div>
             </div>
-            <div class="line"></div>
+            <div class="top-line"></div>
         </div>
-
         <div id="login"></div>
         <div id="registration"></div>
-
-
-
         <div id="shopping" class="shopping"></div>
         <div class="content-body">
-            <div class="menu">
-                <div class="menu__link">Новинки</div>
-                <div class="menu__link">Знижки</div>
-                <div class="menu__link">Одяг</div>
-                <div class="menu__link">Взуття</div>
-            </div>
+            <ul class="menu">
+
+
+                <li class="menu__list">
+                    <a class="sub-menu__link" onclick="productsController.rendler(NOVELTY)">Новинки</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a class="sub-sub-menu__link menu__empty">Новинки 1</a>
+                            <ul class="sub-sub-menu">
+                                <li class="menu__empty">Новинки 1-1</li>
+                                <li class="menu__empty">Новинки 1-2</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="sub-sub-menu__link menu__empty">Новинки 2</a>
+                            <ul class="sub-sub-menu">
+                                <li class="menu__empty">Новинки 2-1</li>
+                                <li class="menu__empty">Новинки 2-2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="menu__list">
+                    <a class="sub-menu__link" onclick="productsController.rendler(DISCOUNTS)">Знижки</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a class="sub-sub-menu__link menu__empty">Знижки 1</a>
+                            <ul class="sub-sub-menu">
+                                <li class="menu__empty">Знижки 1-1</li>
+                                <li class="menu__empty">Знижки 1-2</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="sub-sub-menu__link menu__empty">Знижки 2</a>
+                            <ul class="sub-sub-menu">
+                                <li class="menu__empty">Знижки 2-1</li>
+                                <li class="menu__empty">Знижки 2-2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="menu__list">
+                    <a class="sub-menu__link">Одяг</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a class="sub-sub-menu__link">Верх</a>
+                            <ul class="sub-sub-menu">
+                                <li>
+                                    <a>Головні убори</a>
+                                    <ul class="sub-sub-sub-menu">
+                                        <li onclick="productsController.rendler(HATS)">Кепки</li>
+                                        <li onclick="productsController.rendler(CAPS)">Шапки</li>
+                                    </ul>
+                                </li>
+                                <li onclick="productsController.rendler(SWEATERS)">Кофти</li>
+                                <li onclick="productsController.rendler(T_SHIRTS)">Футблолки</li>
+                                <li onclick="productsController.rendler(JACKETS)">Куртки</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Низ</a>
+                            <ul class="sub-sub-menu">
+                                <li onclick="productsController.rendler(JEANS)">Джинси</li>
+                                <li onclick="productsController.rendler(SHORTS)">Шорти</li>
+                                <li onclick="productsController.rendler(PANTS)">Спорт. штани</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="menu__list">
+                    <a class="sub-menu__link">Взуття</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a class="sub-sub-menu__link">Кроссівки</a>
+                            <ul class="sub-sub-menu">
+                                <li onclick="productsController.rendler(WINTER_SNEAKERS)">Зима</li>
+                                <li onclick="productsController.rendler(SUMMER_SNEAKERS)">Літо</li>
+                            </ul>
+                        </li>
+                        <li class="menu__empty">Черевики</li>
+                        <li class="menu__empty">Туфлі</li>
+                    </ul>
+                </li>
+            </ul>
+
+
             <div class="products">
                 <div class="container">
-                    <div id="products" class="products__row">
-                    </div>
+                    <div id="products" class="products__row"></div>
                     <div id="order"></div>
+                    <div id="image"></div>
                 </div>
+            </div>
+        </div>
+        <div class="bottom-line"></div>
+        <div class="footer">
+            <div class="container">
             </div>
         </div>
     </div>
 
 
 
-
-    <script src="constants/catalog.js"></script>
     <script src="constants/root.js"></script>
     <script src="constants/countries.js"></script>
     <script src="constants/users.js"></script>
     <script src="constants/environment.js"></script>
+    <script src="constants/discounts.js"></script>
+    <script src="constants/novelty.js"></script>
+
+
+    <script src="constants/products/caps.js"></script>
+    <script src="constants/products/hats.js"></script>
+    <script src="constants/products/jackets.js"></script>
+    <script src="constants/products/jeans.js"></script>
+    <script src="constants/products/pants.js"></script>
+    <script src="constants/products/shorts.js"></script>
+    <script src="constants/products/summerSneakers.js"></script>
+    <script src="constants/products/sweaters.js"></script>
+    <script src="constants/products/t-shirt.js"></script>
+    <script src="constants/products/winterSneakers.js"></script>
+    <script src="constants/catalog.js"></script>
+
 
     <script src="utils/localStorageUtil.js"></script>
     <script src="utils/scrollController.js"></script>
     <script src="utils/formsHelper.js"></script>
 
 
+
     <script src="components/Header/Header.js"></script>
     <!-- <link rel="stylesheet" href="components/Header/Header.scss"> -->
     <script src="components/Login/Login.js"></script>
     <script src="components/Registration/Registration.js"></script>
+    <script src="components/Image/CloseUpPicture.js"></script>
+    <script src="components/ProductsController/ProductsController.js"></script>
+
 
 
     <script src="js/script.js"></script>
 
-    <script src="components/Products/Products.js"></script>
-    <!-- <link rel="stylesheet" href="components/Products/Products.scss"> -->
+
 
     <script src="components/Shopping/Shopping.js"></script>
     <!-- <link rel="stylesheet" href="components/Shopping/Shopping.scss"> -->
