@@ -1,8 +1,8 @@
 class Shopping {
 
     clearOneElement(element, id) {
-        productsPage.handleSetLocationStorage(element, id);
-        productsPage.rendler();
+        productsController.handleSetLocationStorage(element, id);
+        productsController.rendler(CATALOG);
         this.rendler();
     }
 
@@ -37,10 +37,12 @@ class Shopping {
                             <div class="bucket__size">${size}</div>
                             <div class="bucket__price">
                                 <div>${price} грн.</div>
-                                <div class="bucket__order" onclick="orderPage.handleOrder('${size}', '${id}', '${description}', '${price}')"><button >Оформити замовлення</button></div>
+                                <div class="bucket__order" onclick="orderPage.handleOrder('${size}', '${id}', '${description}', '${price}')">  
+                                <button>Оформити замовлення</button>
+                                </div>
                             </div>
                         </div>
-                        <button onclick="shoppingPage.clearOneElement(this, '${id}')">
+                        <button class="bucket__close" onclick="shoppingPage.clearOneElement(this, '${id}')">
                             <img src="img/close.png">
                         </button>
                     </div>

@@ -19,23 +19,32 @@ class Header {
                 <a onclick="loginPage.rendler()" class="header__access_link">Увійти</a>
                 <a onclick="registrationPage.rendler()" class="header__access_link">Зареєструватись</a>
             </div>
-            
         `;
         return html;
     }
 
+
+
     rendler() {
+        const item = DISCOUNTS[0];
+        const discounts = `
+        <div onclick="productsController.rendler(DISCOUNTS)" class="header__discounts-row">
+             <div>${item.description}</div>
+             <div>${item.price} грн. <img src="img/sale.png"></div>
+        </div>
+        `;
+
         const check = localStorageUtil.checkAuthorization();
         const html = `
                     <div class="header__navigator">
-                        <a href="http://localhost:8848/index.html" class="header__logo">
+                        <a onClick="productsController.rendler(CATALOG)" class="header__logo">
                             <img src="img/logo.png" alt="#">
                         </a>
                         <button class="header__search">
                             <img src="img/search.png" alt="">
                         </button>
                     </div>
-                    <div class="header__discounts">Some discounts must be here!111</div>
+                    <div class="header__discounts">${discounts}</div>
                     ${check}
         `;
         ROOT_HEADER.innerHTML = html;

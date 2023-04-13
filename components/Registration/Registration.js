@@ -8,7 +8,7 @@ class Registration {
             const password = formData.get('password');
             let id = localStorageUtil.getUsersInMemory().length + 1;
             let errorMessage = '';
-            let height = "280px";
+            let height = "305px";
             const formId = 'registrationForm';
             if (this.validateEmail(email) === false) {
                 e.preventDefault();
@@ -17,7 +17,7 @@ class Registration {
             } else if (this.validatePassword(password) === false) {
                 e.preventDefault();
                 errorMessage = "Пароль має містити 1 велику літеру та 8 символів";
-                height = "300px"
+                height = "325px"
                 formsHelper.onInputError(errorMessage, height, formId);
             } else if (this.checkUserInMemory(email) === true) {
                 e.preventDefault();

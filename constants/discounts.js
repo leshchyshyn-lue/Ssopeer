@@ -1,23 +1,29 @@
 const DISCOUNTS = [
     {
-        id: '1',
+        id: '11',
         size: '29 30 31 32 33 34 35 36',
-        description: 'Спортивні штани Staff hop basic black1',
-        img: 'img/trousers.png',
-        price: '1000 грн'
+        description: 'Джинси Staff light blue slim-fit',
+        img: 'img/products/jeans/jeans2.jpg',
+        price: 1250
     },
     {
-        id: '2',
+        id: '17',
         size: '29 30 31 32 33 34 35 36',
-        description: 'Спортивні штани Staff hop basic black2',
-        img: 'img/trousers.png',
-        price: '1000 грн'
+        description: 'Шорти...',
+        img: 'img/products/shorts/shorts2.jpg',
+        price: 500
     },
     {
-        id: '3',
-        size: '29 30 31 32 33 34 35 36',
-        description: 'Спортивні штани Staff hop basic black3',
-        img: 'img/trousers.png',
-        price: '1000 грн'
+        id: '24',
+        size: 'S M L XL XLL XLLL',
+        description: 'Кофта...',
+        img: 'img/products/sweaters/sweater3.jpg',
+        price: 1100
     }
 ]
+DISCOUNTS.forEach(e => {
+    const sumWithout = e.price / 100 * 25;
+    const result = Math.round(e.price - sumWithout);
+    e.price = result;
+})
+

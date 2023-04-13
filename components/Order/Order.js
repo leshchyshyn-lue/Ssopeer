@@ -1,7 +1,6 @@
 
 class Order {
 
-
     handleOrder(size, id, description, price) {
 
         const sizes = size.split(" ");

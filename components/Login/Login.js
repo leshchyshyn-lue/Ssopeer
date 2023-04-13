@@ -17,7 +17,7 @@ class Login {
             if (confirmed === false) {
                 e.preventDefault();
                 const errorMessage = 'Неправильний логін або пароль';
-                formsHelper.onInputError(errorMessage, '300px', 'loginForm');
+                formsHelper.onInputError(errorMessage, '305px', 'loginForm');
             }
         }, { once: true });
     }
