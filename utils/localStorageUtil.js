@@ -28,7 +28,7 @@ class LocalStorageUtil {
             products.splice(index, 1);
         }
 
-        this.putUser(user.id, user.email, user.password, products);
+        this.putUser(user.id, user.email, user.password, products, user.secondEmail);
         this.putProductsInUserInMemory(products);
         localStorage.setItem(PRODUCTS_KEY, JSON.stringify(products));
         return { pushProduct, products }
@@ -42,8 +42,8 @@ class LocalStorageUtil {
         return "";
     }
 
-    putUser(id, email, password, products) {
-        const user = ({ id, email, password, products });
+    putUser(id, email, password, products, secondEmail) {
+        const user = ({ id, email, password, products, secondEmail });
         localStorage.setItem(USER_KEY, JSON.stringify(user));
         return user;
     }
@@ -56,9 +56,9 @@ class LocalStorageUtil {
         return USERS;
     }
 
-    putUserInMemory(id, email, password, products) {
+    putUserInMemory(id, email, password, products, secondEmail) {
         let users = localStorageUtil.getUsersInMemory();
-        users.push({ id, email, password, products });
+        users.push({ id, email, password, products, secondEmail });
         localStorage.setItem(USERS_IN_MEMORY_KEY, JSON.stringify(users));
         return users;
     }
@@ -80,6 +80,17 @@ class LocalStorageUtil {
                 return;
             }
         });
+    }
+
+    deleteUserInMemory(user) {
+        const users = localStorageUtil.getUsersInMemory();
+        let newUsers = [];
+        Object.values(users).forEach(userInMemory => {
+            if (user.id !== userInMemory.id) {
+                newUsers.push(userInMemory);
+            }
+        });
+        localStorage.setItem(USERS_IN_MEMORY_KEY, JSON.stringify(newUsers));
     }
 
     checkAuthorization() {

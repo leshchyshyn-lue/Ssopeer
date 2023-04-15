@@ -11,27 +11,6 @@
 </head>
 
 <body>
-    <div class="modal-window">
-        <div class="modal-window__search-window">
-            <div class="modal-window__first-row">
-                <div class="modal-window__title">Пошук</div>
-                <button class="close-search">
-                    <img src="img/close.png" alt="#">
-                </button>
-            </div>
-            <form name="searchForm" action="post">
-                <div class="modal-window__second-row">
-                    <input name="searchInput" type="text" placeholder="Введіть текс для пошуку">
-                    <button class="modal-window__search">
-                        <img src="img/search.png" alt="">
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-
-
     <div class="wrapper">
         <div class="header">
             <div class="container">
@@ -44,8 +23,6 @@
         <div id="shopping" class="shopping"></div>
         <div class="content-body">
             <ul class="menu">
-
-
                 <li class="menu__list">
                     <a class="sub-menu__link" onclick="productsController.rendler(NOVELTY)">Новинки</a>
                     <ul class="sub-menu">
@@ -65,8 +42,6 @@
                         </li>
                     </ul>
                 </li>
-
-
                 <li class="menu__list">
                     <a class="sub-menu__link" onclick="productsController.rendler(DISCOUNTS)">Знижки</a>
                     <ul class="sub-menu">
@@ -86,8 +61,6 @@
                         </li>
                     </ul>
                 </li>
-
-
                 <li class="menu__list">
                     <a class="sub-menu__link">Одяг</a>
                     <ul class="sub-menu">
@@ -116,8 +89,6 @@
                         </li>
                     </ul>
                 </li>
-
-
                 <li class="menu__list">
                     <a class="sub-menu__link">Взуття</a>
                     <ul class="sub-menu">
@@ -133,12 +104,12 @@
                     </ul>
                 </li>
             </ul>
-
-
             <div class="products">
                 <div class="container">
                     <div id="products" class="products__row"></div>
                     <div id="order"></div>
+                    <div id="user-menu"></div>
+                    <div id="confirm-window"></div>
                     <div id="image"></div>
                 </div>
             </div>
@@ -151,14 +122,12 @@
     </div>
 
 
-
     <script src="constants/root.js"></script>
     <script src="constants/countries.js"></script>
     <script src="constants/users.js"></script>
     <script src="constants/environment.js"></script>
     <script src="constants/discounts.js"></script>
     <script src="constants/novelty.js"></script>
-
 
     <script src="constants/products/caps.js"></script>
     <script src="constants/products/hats.js"></script>
@@ -172,34 +141,21 @@
     <script src="constants/products/winterSneakers.js"></script>
     <script src="constants/catalog.js"></script>
 
-
     <script src="utils/localStorageUtil.js"></script>
     <script src="utils/scrollController.js"></script>
     <script src="utils/formsHelper.js"></script>
 
-
-
     <script src="components/Header/Header.js"></script>
-    <!-- <link rel="stylesheet" href="components/Header/Header.scss"> -->
     <script src="components/Login/Login.js"></script>
     <script src="components/Registration/Registration.js"></script>
+    <script src="components/UserMenu/UserMenu.js"></script>
     <script src="components/Image/CloseUpPicture.js"></script>
     <script src="components/ProductsController/ProductsController.js"></script>
-
-
-
-    <script src="js/script.js"></script>
-
-
-
+    <script src="components/ConfirmWindow/ConfirmWindow.js"></script>
     <script src="components/Shopping/Shopping.js"></script>
-    <!-- <link rel="stylesheet" href="components/Shopping/Shopping.scss"> -->
-
     <script src="components/Order/Order.js"></script>
 
 
 </body>
-
-
 
 </html>

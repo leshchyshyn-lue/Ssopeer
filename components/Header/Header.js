@@ -6,7 +6,7 @@ class Header {
         <div class="header__menu">
             <a class="header__menu_item" onclick="shoppingPage.rendler()"><img src="img/basket.png" alt="#"></a>
             <div class="header__menu_counter">${productsCounter}</div>
-            <a onclick="" class="header__menu_item"><img src="img/user.png" alt="#"></a>
+            <a onclick="userMenuPage.rendler()" class="header__menu_item"><img src="img/user.png" alt="#"></a>
             <a onclick="localStorageUtil.logOut()" class="header__menu_item"><img src="img/exit.png" alt="#"></a>
         </div> 
         `;

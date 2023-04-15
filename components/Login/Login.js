@@ -9,15 +9,15 @@ class Login {
             const usersInMemory = localStorageUtil.getUsersInMemory();
             let confirmed = false;
             Object.values(usersInMemory).forEach(element => {
-                if (element.email === email && element.password === password) {
-                    localStorageUtil.putUser(element.id, element.email, element.password, Object.values(element.products));
+                if ((element.email === email || element.secondEmail === email) && element.password === password) {
+                    localStorageUtil.putUser(element.id, element.email, element.password, Object.values(element.products), element.secondEmail);
                     confirmed = true;
                 }
             });
             if (confirmed === false) {
                 e.preventDefault();
-                const errorMessage = 'Неправильний логін або пароль';
-                formsHelper.onInputError(errorMessage, '305px', 'loginForm');
+                const errorMessage = 'Неправильний email або пароль';
+                formsHelper.createErrorMessage(errorMessage, '305px', 'loginForm', '.login__enter');
             }
         }, { once: true });
     }
@@ -47,12 +47,12 @@ class Login {
                             </div>
                             <div class="data__pass-row">
                                 <input id="pass" class="data__field" type="password" name="password" placeholder="Введіть ваш пароль">
-                                <img src="img/showpass.png" onclick="formsHelper.showPassword()">
+                                <img src="img/showpass.png" onclick="formsHelper.showPassword('pass')">
                             </div>
-                                <div class="data__buttons">
-                                    <button onclick="loginPage.onLogin()">Увійти</button>
-                                    <a onclick="registrationPage.rendler()">Реєстрація</a>
-                                </div>                           
+                            <div class="data__buttons">
+                                <button onclick="loginPage.onLogin()">Увійти</button>
+                                <a onclick="registrationPage.rendler()">Реєстрація</a>
+                            </div>                           
                         </div>               
                     </form>
                 </div>
