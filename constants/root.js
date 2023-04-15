@@ -5,4 +5,5 @@ const ROOT_ORDER = document.getElementById('order');
 const ROOT_LOGIN = document.getElementById('login');
 const ROOT_REGISTRATION = document.getElementById('registration');
 const ROOT_IMAGE = document.getElementById('image');
-
+const ROOT_USER_MENU = document.getElementById('user-menu');
+const ROOT_CONFIRM_WINDOW = document.getElementById('confirm-window');

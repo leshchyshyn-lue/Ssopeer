@@ -47,68 +47,6 @@ a {
 	cursor: pointer;
 }
 
-.modal-window {
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	overflow: hidden;
-	overflow-y: auto;
-	-webkit-overflow-scrolling: touch;
-	display: none;
-	flex-flow: column nowrap;
-	justify-content: start;
-	align-items: center;
-	z-index: 99;
-	padding: 13px 85px 0px 0px;
-
-	&__title {
-		width: 135px;
-		border: 2px solid white;
-		font-size: 15px;
-		font-weight: 600;
-		border-radius: 2px 2px 0px 0px;
-		padding: 11px;
-		color: white;
-		transition: transform 0.15s ease 0s, opacity 0.15s ease 0s;
-		transform: scale(1);
-	}
-
-	&__search-window {
-		width: 550px;
-		max-width: 100%;
-
-
-		input {
-
-			padding: 17px 0px 17px 5px;
-			width: 100%;
-			background-color: white;
-			border-radius: 0px 0px 0px 2px;
-		}
-	}
-
-	&__first-row {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	&__second-row {
-		display: flex;
-		align-items: center;
-	}
-
-	&__search {
-		border-radius: 0px 2px 2px 0px;
-
-		img {
-			max-width: 50px;
-		}
-	}
-}
-
 .container {
 	padding: 0px 30px;
 }
@@ -175,8 +113,6 @@ a {
 		font-size: 16px;
 		font-weight: 500;
 
-
-
 		&_link {
 			&:hover {
 				padding-bottom: 5px;
@@ -186,8 +122,6 @@ a {
 			&:first-child {
 				margin-right: 30px;
 			}
-
-
 		}
 	}
 
@@ -229,6 +163,141 @@ a {
 		max-height: 50px;
 	}
 }
+
+.user-menu {
+	border: 5px solid #0000ff;
+	overflow-y: auto;
+	background-color: #e0ffff;
+	position: fixed;
+	width: 35%;
+	height: 26.2%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+	::placeholder {
+		padding-left: 5px;
+	}
+
+	&__row {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__title {
+		font-size: 20px;
+		font-weight: 600;
+		margin: 10px 0px;
+		background-color: #0000ff;
+		padding: 10px 20px;
+		border-radius: 5px;
+		color: white;
+		width: 80%;
+		text-align: center;
+		cursor: pointer;
+
+	}
+
+	label {
+		font-size: 15px;
+		display: block;
+		margin-bottom: -5px;
+		margin-top: 10px;
+	}
+
+	form {
+		margin-top: -10px;
+	}
+
+	&__pass-block {
+		display: none;
+		margin-top: 5px;
+	}
+
+	&__addEmail {
+		display: none;
+		margin-top: 5px;
+	}
+
+	&__field {
+		padding: 5px 0px;
+		border: 1px solid black;
+		border-radius: 5px;
+
+
+	}
+
+	&__email-data {
+		display: flex;
+		flex-direction: column;
+		margin-left: -10px;
+	}
+
+	&__data {
+		position: relative;
+
+
+		&_show {
+			position: absolute;
+			top: 21px;
+			right: -15px;
+			max-width: 25px;
+		}
+	}
+
+	&__button {
+		background-color: #0000ff;
+		padding: 8px 13px;
+		border-radius: 5px;
+		font-size: 16px;
+		font-weight: 600;
+		color: #e0ffff;
+		margin-top: 10px;
+		max-width: 60%;
+	}
+
+
+}
+
+.confirm-window {
+	background-color: #e0ffff;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	min-height: 16%;
+	border: 5px solid #0000ff;
+	max-width: 35%;
+
+	&__title {
+		padding: 15px 10px;
+		font-size: 18px;
+		font-weight: 600;
+		text-align: center;
+	}
+
+	&__row {
+		display: flex;
+
+		justify-content: center;
+
+		:last-child {
+			margin-left: 30px;
+
+		}
+
+		button {
+			padding: 5px 15px;
+			background-color: #0000ff;
+			border-radius: 5px;
+			font-size: 14px;
+			font-weight: 600;
+			color: white;
+		}
+	}
+}
+
 
 .content-body {
 	background-color: #e0ffff;
@@ -345,7 +414,6 @@ a {
 		display: block;
 		background-color: #0000ff;
 	}
-
 }
 
 .products {
@@ -441,6 +509,7 @@ a {
 	}
 
 	&__close {
+		background-color: #e0ffff;
 		position: absolute;
 		right: 0;
 		top: 0;
@@ -664,7 +733,6 @@ a {
 }
 
 .login {
-
 	&__enter {
 		border: 5px solid #0000ff;
 		position: fixed;
@@ -681,6 +749,7 @@ a {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
 
 	input {
 		padding: 10px;
@@ -753,13 +822,19 @@ a {
 	text-align: center;
 }
 
+.addEmailErrorMessage {
+	padding: 0px 10px;
+	color: red;
+	font-size: 18px;
+	text-align: center;
+}
+
 .footer {
 	background-color: #0000ff;
 	height: 76px;
 }
 
 .bottom-line {
-
 	border-bottom: 10px solid #e0ffff;
 	background-color: #0000ff;
 	padding: 2.5px;

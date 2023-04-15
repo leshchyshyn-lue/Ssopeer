@@ -10,34 +10,26 @@ class Registration {
             let errorMessage = '';
             let height = "305px";
             const formId = 'registrationForm';
-            if (this.validateEmail(email) === false) {
+            const selector = '.login__enter';
+            if (formsHelper.validateEmail(email) === false) {
                 e.preventDefault();
-                errorMessage = "Не валідний логін";
-                formsHelper.onInputError(errorMessage, height, formId);
-            } else if (this.validatePassword(password) === false) {
+                errorMessage = "Не валідний email";
+                formsHelper.createErrorMessage(errorMessage, height, formId, selector);
+            } else if (formsHelper.validatePassword(password) === false) {
                 e.preventDefault();
                 errorMessage = "Пароль має містити 1 велику літеру та 8 символів";
                 height = "325px"
-                formsHelper.onInputError(errorMessage, height, formId);
+                formsHelper.createErrorMessage(errorMessage, height, formId, selector);
             } else if (this.checkUserInMemory(email) === true) {
                 e.preventDefault();
-                errorMessage = "Цей логін вже зайнятий";
-                formsHelper.onInputError(errorMessage, height, formId);
+                errorMessage = "Цей email вже зайнятий";
+                formsHelper.createErrorMessage(errorMessage, height, formId, selector);
             } else {
-                localStorageUtil.putUserInMemory(id, email, password, []);
-                localStorageUtil.putUser(id, email, password, []);
+                localStorageUtil.putUserInMemory(id, email, password, [], '');
+                localStorageUtil.putUser(id, email, password, [], '');
             }
 
         }, { once: true });
-    }
-
-    validateEmail(email) {
-        const pattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
-        return pattern.test(String(email).toLowerCase());
-    }
-    validatePassword(password) {
-        const pattern = /(?=.*[0-9])(?=.*[A-ZА-ЯЁ])[0-9а-яёА-ЯЁa-zA-Z!@#$%^&*]{8,}/;
-        return pattern.test(password);
     }
 
     checkUserInMemory(email) {
@@ -76,7 +68,7 @@ class Registration {
                             </div>
                             <div class="data__pass-row">
                                 <input id="pass" class="data__field" type="password" name="password" placeholder="Введіть ваш пароль">
-                                <img src="img/showpass.png" onclick="formsHelper.showPassword()">
+                                <img src="img/showpass.png" onclick="formsHelper.showPassword('pass')">
                             </div>
                             <div class="data__buttons">
                                     <button onclick="registrationPage.onRegistration()">Реєстрація</button>
