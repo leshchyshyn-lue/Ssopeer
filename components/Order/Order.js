@@ -59,7 +59,7 @@ class Order {
                         <div class="order__title">Доставка</div>
                         <form>
                             <div class="order__form-row">
-                                <div>
+                                <div class="order__select-country">
                                         ${countryOption}
                                     </select>
                                 </div>

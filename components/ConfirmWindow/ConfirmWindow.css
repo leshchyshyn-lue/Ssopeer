@@ -1,0 +1,62 @@
+.confirm-window {
+  background-color: #e0ffff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  min-height: 120px;
+  border: 5px solid #0000ff;
+  max-width: 35%;
+}
+.confirm-window__title {
+  padding: 15px 10px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+.confirm-window__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.confirm-window__row :last-child {
+  margin-left: 30px;
+}
+.confirm-window__row button {
+  padding: 5px 15px;
+  background-color: #0000ff;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+
+@media (max-width: 800px) {
+  .confirm-window {
+    max-width: 25%;
+    min-height: 90px;
+  }
+  .confirm-window__title {
+    padding: 9px 8px;
+    font-size: 14px;
+  }
+  .confirm-window__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .confirm-window__row :last-child {
+    margin-left: 20px;
+  }
+  .confirm-window__row button {
+    padding: 5px 15px;
+    font-size: 12px;
+  }
+}

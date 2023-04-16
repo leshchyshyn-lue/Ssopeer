@@ -1,0 +1,129 @@
+.user-menu {
+  border: 5px solid #0000ff;
+  overflow-y: auto;
+  background-color: #e0ffff;
+  position: fixed;
+  width: 35%;
+  max-height: 250px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.user-menu ::-webkit-input-placeholder {
+  padding-left: 5px;
+}
+.user-menu ::-moz-placeholder {
+  padding-left: 5px;
+}
+.user-menu :-ms-input-placeholder {
+  padding-left: 5px;
+}
+.user-menu ::-ms-input-placeholder {
+  padding-left: 5px;
+}
+.user-menu ::placeholder {
+  padding-left: 5px;
+}
+.user-menu__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.user-menu__title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px 0px;
+  background-color: #0000ff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  width: 80%;
+  text-align: center;
+  cursor: pointer;
+}
+.user-menu label {
+  font-size: 15px;
+  display: block;
+  margin-bottom: -5px;
+  margin-top: 10px;
+}
+.user-menu form {
+  margin-top: -10px;
+}
+.user-menu__pass-block {
+  display: none;
+  margin-top: 5px;
+}
+.user-menu__addEmail {
+  display: none;
+  margin-top: 5px;
+}
+.user-menu__field {
+  padding: 5px 0px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.user-menu__email-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: -10px;
+}
+.user-menu__data {
+  position: relative;
+}
+.user-menu__data_show {
+  position: absolute;
+  top: 21px;
+  right: -15px;
+  max-width: 25px;
+}
+.user-menu__button {
+  background-color: #0000ff;
+  padding: 8px 13px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #e0ffff;
+  margin-top: 10px;
+  max-width: 60%;
+}
+
+@media (max-width: 800px) {
+  .approaching__close img {
+    max-width: 35px;
+  }
+  .errorMessage {
+    padding: 0px 8px;
+    font-size: 14px;
+  }
+  .addEmailErrorMessage {
+    padding: 0px 8px;
+    font-size: 14px;
+  }
+  .user-menu__title {
+    font-size: 13px;
+  }
+  .user-menu label {
+    font-size: 12px;
+  }
+  .user-menu__data_show {
+    top: 18px;
+  }
+  .user-menu__button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
