@@ -23,8 +23,6 @@ class Header {
         return html;
     }
 
-
-
     rendler() {
         const item = DISCOUNTS[0];
         const discounts = `

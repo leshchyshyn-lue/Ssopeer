@@ -1,0 +1,152 @@
+.bucket-back{
+	width: 100%;
+	background-color: white;
+	position: fixed;
+	z-index: 2;
+	height: 120%;
+	left: 0;
+	top: 0;
+	
+}
+.bucket {
+	background-color: #e0ffff;
+	position: fixed;
+	z-index: 2;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	color: black;
+	width: 70%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 50px;
+	overflow-y: auto;
+
+	&__title {
+		position: absolute;
+		left: 30px;
+		top: 5px;
+		font-size: 25px;
+		font-weight: bold;
+	}
+
+	&__emty {
+		margin: auto;
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	button {
+		max-width: 50px;
+		max-height: 50px;
+		background-color: #e0ffff;
+		margin-top: -50px;
+	}
+
+	&__description {
+		margin-bottom: 10px;
+		font-size: 16px;
+	}
+
+	&__size {
+		margin-bottom: 10px;
+	}
+
+	&__price {
+		font-weight: bold;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__element {
+		font-size: 14px;
+		padding: 5px 15px 5px 15px;
+		min-width: 100%;
+	}
+
+	&__close {
+		margin-left: -30px;
+	}
+
+	&__row {
+		margin-top: 5px;
+		display: flex;
+		border: solid 3px #0000ff;
+		justify-content: space-between;
+		min-width: 300px;
+
+		button {
+			max-width: 25px;
+			max-height: 25px;
+			margin-top: 0px;
+
+			img {
+				max-width: 25px;
+				max-height: 25px;
+			}
+		}
+	}
+
+	&__sum {
+		margin-top: 20px;
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	&__order {
+		font-size: 14px;
+
+		button {
+			background-color: #0000ff;
+			color: white;
+			min-width: 100px;
+			min-height: 40px;
+			border-radius: 5px;
+		}
+	}
+}
+
+@media(max-width:600px){
+	.bucket {
+		width: 90%;
+	}
+}
+
+@media(max-width: 450px){
+	.bucket {
+		button{
+			img{
+				margin-top: -15px;
+				max-width: 35px;
+			}
+		}
+		&__title {
+			font-size: 20px;
+		}
+		&__emty {
+			font-size: 16px;
+			font-weight: bold;
+		}
+		&__element {
+			font-size: 12px;
+		}
+		&__close {
+			padding-top: 15px;
+		}
+		&__row {
+			min-width: 250px;
+		}
+		&__sum {
+			margin-top: 12px;
+			font-size: 14px;	
+		}
+		&__order {
+			button {
+				font-size: 12px;
+				min-width: 80px;
+			}
+		}
+	}
+}

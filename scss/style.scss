@@ -5,10 +5,10 @@
 	margin: 0 auto;
 	max-width: 1040px;
 }
-
-button {
-	background-color: white;
+.container {
+	padding: 0px 30px;
 }
+
 
 form {
 	input:hover {
@@ -47,257 +47,11 @@ a {
 	cursor: pointer;
 }
 
-.container {
-	padding: 0px 30px;
-}
-
 .top-line {
 	border-top: 10px solid #e0ffff;
 	background-color: #0000ff;
 	padding: 2.5px;
 }
-
-.header {
-	background-color: #0000ff;
-
-	&__navigator {
-		display: flex;
-	}
-
-	&__search {
-		background-color: #0000ff;
-
-		&:hover {
-			border-bottom: 3px solid black;
-		}
-	}
-
-	&__discounts-row {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		position: relative;
-		cursor: pointer;
-
-		img {
-			position: absolute;
-			top: 17px;
-			right: 0;
-		}
-	}
-
-	&__row {
-		padding: 13px 0px;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	&__logo {
-		margin-right: 30px;
-		background-color: #0000ff;
-
-		&:hover {
-			padding-bottom: 5px;
-			border-bottom: 3px solid black;
-		}
-	}
-
-	&__discounts {
-		color: white;
-		font-size: 18px;
-	}
-
-	&__access {
-		display: flex;
-		font-size: 16px;
-		font-weight: 500;
-
-		&_link {
-			&:hover {
-				padding-bottom: 5px;
-				border-bottom: 3px solid black;
-			}
-
-			&:first-child {
-				margin-right: 30px;
-			}
-		}
-	}
-
-	&__menu {
-		display: flex;
-
-		&_item {
-			margin-right: 30px;
-			background-color: #0000ff;
-
-			&:hover {
-				padding-bottom: 5px;
-				border-bottom: 3px solid black;
-			}
-
-			&:last-child {
-				margin-right: 0px;
-			}
-
-			&:first-child {
-				margin-right: 0px;
-				cursor: pointer;
-			}
-		}
-
-		&_counter {
-			background-color: #000000;
-			padding: 0px 5px;
-			border-radius: 2px;
-			color: white;
-			max-height: 14px;
-			margin-right: auto;
-			margin-right: 30px;
-		}
-	}
-
-	img {
-		max-width: 50px;
-		max-height: 50px;
-	}
-}
-
-.user-menu {
-	border: 5px solid #0000ff;
-	overflow-y: auto;
-	background-color: #e0ffff;
-	position: fixed;
-	width: 35%;
-	height: 26.2%;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-
-	::placeholder {
-		padding-left: 5px;
-	}
-
-	&__row {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
-	&__title {
-		font-size: 20px;
-		font-weight: 600;
-		margin: 10px 0px;
-		background-color: #0000ff;
-		padding: 10px 20px;
-		border-radius: 5px;
-		color: white;
-		width: 80%;
-		text-align: center;
-		cursor: pointer;
-
-	}
-
-	label {
-		font-size: 15px;
-		display: block;
-		margin-bottom: -5px;
-		margin-top: 10px;
-	}
-
-	form {
-		margin-top: -10px;
-	}
-
-	&__pass-block {
-		display: none;
-		margin-top: 5px;
-	}
-
-	&__addEmail {
-		display: none;
-		margin-top: 5px;
-	}
-
-	&__field {
-		padding: 5px 0px;
-		border: 1px solid black;
-		border-radius: 5px;
-
-
-	}
-
-	&__email-data {
-		display: flex;
-		flex-direction: column;
-		margin-left: -10px;
-	}
-
-	&__data {
-		position: relative;
-
-
-		&_show {
-			position: absolute;
-			top: 21px;
-			right: -15px;
-			max-width: 25px;
-		}
-	}
-
-	&__button {
-		background-color: #0000ff;
-		padding: 8px 13px;
-		border-radius: 5px;
-		font-size: 16px;
-		font-weight: 600;
-		color: #e0ffff;
-		margin-top: 10px;
-		max-width: 60%;
-	}
-
-
-}
-
-.confirm-window {
-	background-color: #e0ffff;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	min-height: 16%;
-	border: 5px solid #0000ff;
-	max-width: 35%;
-
-	&__title {
-		padding: 15px 10px;
-		font-size: 18px;
-		font-weight: 600;
-		text-align: center;
-	}
-
-	&__row {
-		display: flex;
-
-		justify-content: center;
-
-		:last-child {
-			margin-left: 30px;
-
-		}
-
-		button {
-			padding: 5px 15px;
-			background-color: #0000ff;
-			border-radius: 5px;
-			font-size: 14px;
-			font-weight: 600;
-			color: white;
-		}
-	}
-}
-
 
 .content-body {
 	background-color: #e0ffff;
@@ -311,7 +65,6 @@ a {
 	font-size: 18px;
 	color: #000000;
 	font-weight: bold;
-
 
 	a {
 		color: #000000;
@@ -416,210 +169,6 @@ a {
 	}
 }
 
-.products {
-	&__row {
-		display: grid;
-		justify-content: space-between;
-		max-width: 942px;
-		grid-template-columns: repeat(auto-fit, minmax(212.5px, 1fr));
-		gap: 10px;
-
-	}
-
-	&__product {
-		margin-top: 3%;
-
-	}
-
-	&__image {
-		margin-bottom: 3px;
-		position: relative;
-		padding: 0px 0px 90% 0px;
-
-
-	}
-
-	&__image img {
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 100%;
-		width: 100%;
-		object-fit: cover;
-	}
-
-	&__details {
-		text-align: center;
-		margin-top: -3px;
-		border: solid 2px #0000ff;
-		border-radius: 0px 0px 5px 5px;
-		border-top: 0px;
-
-		font-size: 14px;
-
-		&_description {
-
-			padding-top: 5px;
-
-			margin-bottom: 10px;
-			font-size: 20px;
-		}
-
-		&_sizes {
-			margin-bottom: 10px;
-		}
-
-		&_price {
-			margin-bottom: 5px;
-			font-weight: bold;
-		}
-
-		&_add {
-			padding: 5px 0px;
-			width: 100%;
-			border-radius: 0px 0px 3px 3px;
-			background-color: #0000ff;
-			color: white;
-			font-size: 14px;
-		}
-
-		&_active {
-			background-color: #e0ffff;
-			color: black;
-			border-top: 2px solid #0000ff;
-		}
-	}
-}
-
-.approaching {
-
-	position: fixed;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	color: black;
-	width: 80%;
-	height: 95%;
-	display: flex;
-	justify-content: center;
-	position: relative;
-
-	img {
-		max-height: 100%;
-	}
-
-	&__close {
-		background-color: #e0ffff;
-		position: absolute;
-		right: 0;
-		top: 0;
-
-	}
-}
-
-
-.bucket {
-	background-color: #e0ffff;
-	position: fixed;
-	z-index: 2;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	color: black;
-	width: 1000px;
-	height: 100%;
-	display: flex;
-	justify-content: space-between;
-	padding-top: 50px;
-	overflow-y: auto;
-
-
-	&__title {
-		position: absolute;
-		left: 30px;
-		top: 5px;
-		font-size: 25px;
-		font-weight: bold;
-	}
-
-	&__emty {
-		margin: auto;
-		font-size: 20px;
-		font-weight: bold;
-	}
-
-	button {
-		max-width: 50px;
-		max-height: 50px;
-		background-color: #e0ffff;
-		margin-top: -50px;
-	}
-
-	&__description {
-		margin-bottom: 10px;
-		font-size: 16px;
-	}
-
-	&__size {
-		margin-bottom: 10px;
-	}
-
-	&__price {
-		font-weight: bold;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	&__element {
-		font-size: 14px;
-		padding: 5px 15px 5px 15px;
-		min-width: 100%;
-	}
-
-	&__close {
-		margin-left: -30px;
-	}
-
-	&__row {
-		margin-top: 5px;
-		display: flex;
-		border: solid 3px #0000ff;
-		justify-content: space-between;
-		min-width: 300px;
-
-		button {
-			max-width: 25px;
-			max-height: 25px;
-			margin-top: 0px;
-
-			img {
-				max-width: 25px;
-				max-height: 25px;
-			}
-		}
-	}
-
-	&__sum {
-		margin-top: 20px;
-		font-size: 18px;
-		font-weight: bold;
-	}
-
-	&__order {
-		font-size: 14px;
-
-
-		button {
-			background-color: #0000ff;
-			color: white;
-			min-width: 100px;
-			min-height: 40px;
-			border-radius: 5px;
-		}
-	}
-}
-
 .window {
 	position: fixed;
 	z-index: 2;
@@ -643,12 +192,10 @@ a {
 			margin-top: 0px;
 			background-color: #e0ffff;
 
-
 			img {
 				max-width: 25px;
 				max-height: 25px;
 			}
-
 		}
 	}
 
@@ -656,79 +203,6 @@ a {
 		font-size: 20px;
 		font-weight: bold;
 		padding: 10px 0px 10px 10px;
-	}
-
-}
-
-.order {
-	&__title {
-		font-size: 20px;
-		font-weight: bold;
-		padding: 10px 0px 10px 10px;
-	}
-
-	&__data {
-		font-size: 16px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		border-bottom: 2px solid #0000ff;
-		padding-bottom: 10px;
-
-		:first-child {
-			padding-bottom: 5px;
-		}
-
-		:nth-child(2) {
-			padding-bottom: 5px;
-		}
-	}
-
-	&__contacts {
-		border-bottom: 2px solid #0000ff;
-		padding-bottom: 10px;
-	}
-
-	&__form-row {
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-	}
-
-	&__confirm {
-		background-color: #e0ffff;
-		width: 500px;
-		height: 520px;
-
-		position: fixed;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
-	}
-
-	&__comment {
-		padding: 0px 10px;
-
-		input {
-			width: 100%;
-
-		}
-	}
-
-
-
-	&__confirm-button {
-		display: flex;
-		justify-content: center;
-		margin: 10px 0px;
-
-		button {
-			background-color: #0000ff;
-			border-radius: 5px;
-			width: 100px;
-			color: white;
-			padding: 5px 5px;
-		}
 	}
 }
 
@@ -749,7 +223,6 @@ a {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-
 
 	input {
 		padding: 10px;
@@ -838,4 +311,140 @@ a {
 	border-bottom: 10px solid #e0ffff;
 	background-color: #0000ff;
 	padding: 2.5px;
+}
+
+
+@media(max-width: 800px){
+	.window {
+		width: 700px;
+	}
+	.wrapper {
+		padding: 0px 20px;
+		max-width: 740px;
+	}
+	.container {
+		padding: 0px 20px;
+	}
+	.top-line {
+		border-top: 6px solid #e0ffff;
+	}
+	.bottom-line {
+		border-bottom: 6px solid #e0ffff;
+	}
+	.menu {
+		padding: 15px 0px 0px 0px;
+		font-size: 14px;
+		&__list {	
+			margin-bottom: 15px;
+		}
+		:hover {
+			.sub-menu__link {
+				padding: 6px;
+			}
+		}
+	}
+	.sub-menu {
+		font-size: 14px;
+		li {
+			padding: 6px 6px;
+			min-width: 120px;
+		}
+	}
+	.sub-sub-menu {
+		font-size: 14px;
+		min-width: 120px;
+	
+		li {
+			padding: 6px 6px;
+		}
+	}
+	.sub-sub-sub-menu {
+		min-width: 120px;
+		
+		li {
+			padding: 6px 6px;
+		}
+	}
+	.footer {
+		height: 47px;
+	}
+}
+
+
+@media(max-width: 600px){
+	.window {
+		width: 540px;
+	}
+	.wrapper {
+		padding: 0px 7px;
+		max-width: 540px;
+	}
+	.top-line {
+		border-top: 3px solid #e0ffff;
+		padding: 1.5px;
+	}
+	.bottom-line {
+		border-bottom: 3px solid #e0ffff;
+		padding: 1.5px;
+	}
+
+	.menu {
+		padding: 10px 0px 0px 0px;
+		&__list {	
+			margin-bottom: 7px;
+		}
+	}
+	.sub-menu {
+		li {
+			padding: 6px 6px;
+			min-width: 100px;
+		}
+	}
+	.sub-sub-menu {
+		min-width: 100px;
+	}
+	.sub-sub-sub-menu {
+		min-width: 100px;
+	}
+	.footer {
+		height: 26.2px;
+	}
+}
+
+@media(max-width: 490px){
+	.menu {
+		&__list {	
+			margin-bottom: -2px;
+		}
+	}
+}
+
+@media(max-width: 400px){
+	.wrapper {
+		padding: 0px 7px;
+		max-width: 340px;
+	}
+	.container {
+		padding: 0px 7px;
+	}
+	.menu {
+		font-size: 12px;
+		&__list{
+			margin-right: 20px;
+		}
+	}
+	.sub-menu {
+		font-size: 12px;
+		li {
+			min-width: 90px;
+		}
+	}
+	.sub-sub-menu {
+		font-size: 12px;
+		min-width: 90px;
+	}
+	.sub-sub-sub-menu {
+		font-size: 12px;
+		min-width: 90px;
+	}
 }

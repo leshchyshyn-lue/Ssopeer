@@ -1,0 +1,26 @@
+.approaching {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: black;
+  width: 80%;
+  height: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+.approaching img {
+  max-height: 100%;
+}
+.approaching__close {
+  background-color: #e0ffff;
+  position: absolute;
+  right: 0;
+  top: 0;
+}

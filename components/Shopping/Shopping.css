@@ -1,0 +1,146 @@
+.bucket-back {
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  z-index: 2;
+  height: 120%;
+  left: 0;
+  top: 0;
+}
+
+.bucket {
+  background-color: #e0ffff;
+  position: fixed;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: black;
+  width: 70%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 50px;
+  overflow-y: auto;
+}
+.bucket__title {
+  position: absolute;
+  left: 30px;
+  top: 5px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.bucket__emty {
+  margin: auto;
+  font-size: 20px;
+  font-weight: bold;
+}
+.bucket button {
+  max-width: 50px;
+  max-height: 50px;
+  background-color: #e0ffff;
+  margin-top: -50px;
+}
+.bucket__description {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.bucket__size {
+  margin-bottom: 10px;
+}
+.bucket__price {
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.bucket__element {
+  font-size: 14px;
+  padding: 5px 15px 5px 15px;
+  min-width: 100%;
+}
+.bucket__close {
+  margin-left: -30px;
+}
+.bucket__row {
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: solid 3px #0000ff;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-width: 300px;
+}
+.bucket__row button {
+  max-width: 25px;
+  max-height: 25px;
+  margin-top: 0px;
+}
+.bucket__row button img {
+  max-width: 25px;
+  max-height: 25px;
+}
+.bucket__sum {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.bucket__order {
+  font-size: 14px;
+}
+.bucket__order button {
+  background-color: #0000ff;
+  color: white;
+  min-width: 100px;
+  min-height: 40px;
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  .bucket {
+    width: 90%;
+  }
+}
+@media (max-width: 450px) {
+  .bucket button img {
+    margin-top: -15px;
+    max-width: 35px;
+  }
+  .bucket__title {
+    font-size: 20px;
+  }
+  .bucket__emty {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .bucket__element {
+    font-size: 12px;
+  }
+  .bucket__close {
+    padding-top: 15px;
+  }
+  .bucket__row {
+    min-width: 250px;
+  }
+  .bucket__sum {
+    margin-top: 12px;
+    font-size: 14px;
+  }
+  .bucket__order button {
+    font-size: 12px;
+    min-width: 80px;
+  }
+}

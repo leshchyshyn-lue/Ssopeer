@@ -1,0 +1,215 @@
+.header {
+  background-color: #0000ff;
+}
+.header__navigator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header__search {
+  background-color: #0000ff;
+}
+.header__search:hover {
+  border-bottom: 3px solid black;
+}
+.header__discounts-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.header__discounts-row img {
+  position: absolute;
+  top: 17px;
+  right: 0;
+}
+.header__row {
+  padding: 13px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__logo {
+  margin-right: 30px;
+  background-color: #0000ff;
+}
+.header__logo:hover {
+  padding-bottom: 5px;
+  border-bottom: 3px solid black;
+}
+.header__discounts {
+  color: white;
+  font-size: 18px;
+}
+.header__access {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+}
+.header__access_link:hover {
+  padding-bottom: 5px;
+  border-bottom: 3px solid black;
+}
+.header__access_link:first-child {
+  margin-right: 30px;
+}
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header__menu_item {
+  margin-right: 30px;
+  background-color: #0000ff;
+}
+.header__menu_item:hover {
+  padding-bottom: 5px;
+  border-bottom: 3px solid black;
+}
+.header__menu_item:last-child {
+  margin-right: 0px;
+}
+.header__menu_item:first-child {
+  margin-right: 0px;
+  cursor: pointer;
+}
+.header__menu_counter {
+  background-color: #000000;
+  padding: 0px 5px;
+  border-radius: 2px;
+  color: white;
+  max-height: 14px;
+  margin-right: auto;
+  margin-right: 30px;
+}
+.header img {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+@media (max-width: 800px) {
+  .header__menu_item {
+    margin-right: 10px;
+  }
+  .header__menu_item img {
+    max-width: 35px;
+  }
+  .header__menu_item:hover {
+    padding-bottom: 3px;
+    border-bottom: 2px solid black;
+  }
+  .header__menu_counter {
+    padding: 0px 5px;
+    max-height: 14px;
+    margin-right: 10px;
+  }
+  .header__search img {
+    max-width: 35px;
+  }
+  .header__search:hover {
+    border-bottom: 2px solid black;
+  }
+  .header__discounts-row img {
+    max-width: 35px;
+    top: 12px;
+  }
+  .header__row {
+    padding: 6px 0px;
+  }
+  .header__logo {
+    margin-right: 15px;
+  }
+  .header__logo img {
+    max-width: 35px;
+  }
+  .header__logo:hover {
+    padding-bottom: 3px;
+    border-bottom: 2px solid black;
+  }
+  .header__discounts {
+    font-size: 15px;
+  }
+  .header__access {
+    font-size: 12px;
+  }
+  .header__access_link:hover {
+    padding-bottom: 3px;
+    border-bottom: 2px solid black;
+  }
+  .header__access_link:first-child {
+    margin-right: 15px;
+  }
+}
+@media (max-width: 600px) {
+  .header__menu_item {
+    margin-right: 15px;
+  }
+  .header__menu_item img {
+    max-width: 20px;
+  }
+  .header__menu_item:hover {
+    padding-bottom: 1px;
+    border-bottom: 1px solid black;
+  }
+  .header__menu_item_counter {
+    padding: 0px 3px;
+    max-height: 8px;
+    margin-right: 15px;
+    font-size: 8px;
+  }
+  .header__menu__search img {
+    max-width: 20px;
+  }
+  .header__menu__search:hover {
+    border-bottom: 1px solid black;
+  }
+  .header__menu__discounts-row img {
+    max-width: 20px;
+    top: 6px;
+  }
+  .header__menu__row {
+    padding: 3px 0px;
+  }
+  .header__menu__logo {
+    margin-right: 15px;
+  }
+  .header__menu__logo img {
+    max-width: 20px;
+  }
+  .header__menu__logo:hover {
+    padding-bottom: 1px;
+    border-bottom: 1px solid black;
+  }
+  .header__menu__discounts {
+    font-size: 10px;
+  }
+  .header__menu__search img {
+    max-width: 20px;
+  }
+  .header__menu__access {
+    font-size: 10px;
+  }
+  .header__menu__access_link:hover {
+    padding-bottom: 1px;
+    border-bottom: 1px solid black;
+  }
+  .header__menu__access_link:first-child {
+    margin-right: 7px;
+  }
+}

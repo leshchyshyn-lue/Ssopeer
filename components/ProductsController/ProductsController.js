@@ -65,4 +65,4 @@ class ProductsController {
 }
 
 const productsController = new ProductsController();
-productsController.rendler(CATALOG)
+productsController.rendler(CATALOG);
